@@ -51,4 +51,5 @@ ax3.plot(date_list, hkd_b_list, c='red')
 ax3.plot(date_list, hkd_s_list, c='green')
 ax3.set_ylabel("HKD/CNY")  # 添加子图y轴标签
 
-plt.show()
+# plt.show()
+plt.savefig(datetime.datetime.now().strftime("%Y%m%d%H%M%S") + ".png")
