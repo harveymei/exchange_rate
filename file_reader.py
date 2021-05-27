@@ -57,5 +57,6 @@ ax3.set_xlabel("Weekday", fontsize=16)  # 仅在第三幅图显示x轴标签
 ax3.grid(True)
 fig.autofmt_xdate()
 
+
 # plt.show()
 plt.savefig(datetime.datetime.now().strftime("%Y%m%d%H%M%S") + ".png")
