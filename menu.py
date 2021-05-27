@@ -7,7 +7,7 @@
 # @GitHub  : https://github.com/harveymei/
 
 
-def forex_menu():
+def rate_menu():
       print("请选择将要执行的操作\n"
             "1) 录入数据\n"
             "2) 分析数据\n"

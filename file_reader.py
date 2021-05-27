@@ -6,7 +6,7 @@
 # @IDE     : PyCharm
 # @GitHub  : https://github.com/harveymei/
 import json
-import datetime
+from datetime import datetime as dt  # 减少输入
 from matplotlib import pyplot as plt
 
 
@@ -18,7 +18,7 @@ with open(filename) as f_object:
     full_data = json.load(f_object)
 
     for data in full_data:
-        date_list.append(datetime.datetime.strptime(data['date'], "%Y-%m-%d"))  # 日期字符串转日期对象写入列表
+        date_list.append(dt.strptime(data['date'], "%Y-%m-%d"))  # 日期字符串转日期对象写入列表
         usd_b_list.append(data['usd_cny']['buy_rate'])
         usd_s_list.append(data['usd_cny']['sell_rate'])
         eur_b_list.append(data['eur_cny']['buy_rate'])
@@ -34,7 +34,7 @@ with open(filename) as f_object:
 # https://matplotlib.org/stable/gallery/subplots_axes_and_figures/shared_axis_demo.html
 # 三位整数（行，列，索引），可逗号分隔或整体传入参数
 fig = plt.figure(figsize=(10, 6), dpi=128)
-fig.suptitle("Ping An Bank Forex Rate Per Day", fontsize=24)
+fig.suptitle("Ping An Bank Forex Rate Per Weekday", fontsize=24)
 
 ax1 = plt.subplot(311)  # 绘图（3行，1列，第1幅）
 ax1.plot(date_list, usd_b_list, c='red')
@@ -59,4 +59,4 @@ fig.autofmt_xdate()
 
 
 # plt.show()
-plt.savefig(datetime.datetime.now().strftime("%Y%m%d%H%M%S") + ".png")
+plt.savefig(dt.now().strftime("%Y%m%d%H%M%S") + ".png")
