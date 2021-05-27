@@ -8,15 +8,20 @@
 
 """
 数据来源：平安银行每工作日10点钟汇率订阅短信息
-使用round()函数处理录入浮点数省略0的问题
+round()函数截取小数点后n位且不会四舍五入
 缩进格式写入json数据（易于阅读）
+使用subplot绘制多图
 """
+
 import json
 from datetime import datetime as dt  # 减少输入
 from matplotlib import pyplot as plt
 
 
 def rate_input():
+    """
+    定义汇率录入函数
+    """
     filename = 'data.json'
     with open(filename) as f_object:
         full_data = json.load(f_object)  # 使用Json解码可正常识别[]为空列表，而不是字符串
@@ -27,7 +32,7 @@ def rate_input():
                                   "或直接敲回车键退出录入返回主菜单 ")
             if input_value_1 == '':
                 # break
-                menu.rate_menu()  # 退回主菜单
+                rate_menu()  # 退回主菜单
 
             input_key_2 = "usd_cny"
             buy_rate_2 = float(input("请输入USD买入价："))
@@ -60,6 +65,9 @@ def rate_input():
 
 
 def rate_output():
+    """
+    定义汇率分析函数
+    """
     filename = 'data.json'
     date_list = []
     usd_b_list, usd_s_list, eur_b_list, eur_s_list, hkd_b_list, hkd_s_list = [], [], [], [], [], []
