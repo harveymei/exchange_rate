@@ -114,8 +114,8 @@ def rate_output():
     ax2.legend(('buy_rate', 'sell_rate'), fontsize=8, loc='lower left')
 
     ax3 = plt.subplot(313, sharex=ax1)  # 绘图（3行，1列，第3幅）,共享第一幅x轴
-    ax3.plot(date_list, hkd_b_list, c='m')
-    ax3.plot(date_list, hkd_s_list, c='k')
+    ax3.plot(date_list, hkd_b_list, c='m')  # magenta 洋红色
+    ax3.plot(date_list, hkd_s_list, c='k')  # black 黑色
     ax3.set_ylabel("HKD/CNY", fontsize=16)  # 添加子图y轴标签
     ax3.set_xlabel("Weekday", fontsize=16)  # 仅在第三幅图显示x轴标签
     ax3.grid(True)
