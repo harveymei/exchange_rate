@@ -118,9 +118,12 @@ def rate_output():
     # plt.show()
     plt.savefig(dt.now().strftime("%Y%m%d%H%M%S") + ".png")
 
+    print("数据分析完成，返回主菜单")
+    rate_menu()
+
 
 def rate_menu():
-    print("请选择将要执行的操作\n"
+    print("\n请选择将要执行的操作\n"
           "1) 录入数据\n"
           "2) 分析数据\n"
           "3) 退出程序\n"
