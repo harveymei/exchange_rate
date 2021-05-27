@@ -16,3 +16,4 @@ def rate_menu():
 
       option = input("输入选项值并按回车键确认：")
 
+
