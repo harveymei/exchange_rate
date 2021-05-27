@@ -6,6 +6,11 @@
 # @IDE     : PyCharm
 # @GitHub  : https://github.com/harveymei/
 
+"""
+
+使用round()函数处理录入浮点数省略0的问题
+缩进格式写入json数据（易于阅读）
+"""
 import json
 
 filename = 'data.json'
@@ -21,17 +26,17 @@ with open(filename) as f_object:
         input_key_2 = "usd_cny"
         buy_rate_2 = float(input("请输入USD买入价："))
         sell_rate_2 = float(input("请输入USD卖出价："))
-        input_value_2 = {"buy_rate": buy_rate_2, "sell_rate": sell_rate_2}
+        input_value_2 = {"buy_rate": round(buy_rate_2, 4), "sell_rate": round(sell_rate_2, 4)}  # 处理浮点数保留小数位数
 
         input_key_3 = "eur_cny"
         buy_rate_3 = float(input("请输入EUR买入价："))
         sell_rate_3 = float(input("请输入EUR卖出价："))
-        input_value_3 = {"buy_rate": buy_rate_3, "sell_rate": sell_rate_3}
+        input_value_3 = {"buy_rate": round(buy_rate_3, 4), "sell_rate": round(sell_rate_3, 4)}
 
         input_key_4 = "hkd_cny"
         buy_rate_4 = float(input("请输入HKD买入价："))
         sell_rate_4 = float(input("请输入HKD卖出价："))
-        input_value_4 = {"buy_rate": buy_rate_4, "sell_rate": sell_rate_4}
+        input_value_4 = {"buy_rate": round(buy_rate_4, 4), "sell_rate": round(sell_rate_4, 4)}
 
         rate_record = {
             input_key_1: input_value_1,

@@ -49,11 +49,11 @@ ax2.plot(date_list, eur_s_list, c='blue')
 ax2.set_ylabel("EUR/CNY", fontsize=16)
 ax2.grid(True)
 
-
 ax3 = plt.subplot(313, sharex=ax1)  # 绘图（3行，1列，第3幅）,共享第一幅x轴
 ax3.plot(date_list, hkd_b_list, c='red')
 ax3.plot(date_list, hkd_s_list, c='blue')
 ax3.set_ylabel("HKD/CNY", fontsize=16)  # 添加子图y轴标签
+ax3.set_xlabel("Weekday", fontsize=16)  # 仅在第三幅图显示x轴标签
 ax3.grid(True)
 fig.autofmt_xdate()
 
