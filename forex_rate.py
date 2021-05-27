@@ -106,15 +106,16 @@ def rate_output():
     ax1.legend(('buy_rate', 'sell_rate'), fontsize=8, loc='lower left')  # 添加图例，指定字体大小及位置
 
     ax2 = plt.subplot(312, sharex=ax1)  # 绘图（3行，1列，第2幅）,共享第一幅x轴
-    ax2.plot(date_list, eur_b_list, c='red')
-    ax2.plot(date_list, eur_s_list, c='blue')
+    # https://matplotlib.org/stable/tutorials/colors/colors.html
+    ax2.plot(date_list, eur_b_list, color='green')
+    ax2.plot(date_list, eur_s_list, color='yellow')
     ax2.set_ylabel("EUR/CNY", fontsize=16)
     ax2.grid(True)
     ax2.legend(('buy_rate', 'sell_rate'), fontsize=8, loc='lower left')
 
     ax3 = plt.subplot(313, sharex=ax1)  # 绘图（3行，1列，第3幅）,共享第一幅x轴
-    ax3.plot(date_list, hkd_b_list, c='red')
-    ax3.plot(date_list, hkd_s_list, c='blue')
+    ax3.plot(date_list, hkd_b_list, c='m')
+    ax3.plot(date_list, hkd_s_list, c='k')
     ax3.set_ylabel("HKD/CNY", fontsize=16)  # 添加子图y轴标签
     ax3.set_xlabel("Weekday", fontsize=16)  # 仅在第三幅图显示x轴标签
     ax3.grid(True)
