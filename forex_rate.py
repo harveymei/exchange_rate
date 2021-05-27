@@ -125,6 +125,9 @@ def rate_output():
 
 
 def rate_menu():
+    """
+    定义主菜单函数
+    """
     print("\n请选择将要执行的操作\n"
           "1) 录入数据\n"
           "2) 分析数据\n"
