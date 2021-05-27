@@ -28,13 +28,13 @@ with open(filename) as f_object:
 
     print(date_list, usd_b_list)
 
-# 两个或多个共享一个轴的图（解决多个y值差距较大，单图因比例问题影响细节显示）
+# 两个或多个共享一个轴的图（解决不同y值差距较大，单图因比例问题影响细节显示）
 # https://matplotlib.org/stable/gallery/subplots_axes_and_figures/share_axis_lims_views.html
 # https://matplotlib.org/stable/gallery/subplots_axes_and_figures/shared_axis_demo.html
 # 三位整数（行，列，索引），可逗号分隔或整体传入参数
 fig = plt.figure(figsize=(10, 6), dpi=128)
 fig.suptitle("Ping An Bank Forex Rate Per Day")
-ax1 = plt.subplot(311)
+ax1 = plt.subplot(311)  # 绘图（3行，1列，第1幅）
 ax1.plot(date_list, usd_b_list, c='red')
 ax1.plot(date_list, usd_s_list, c='green')
 ax1.set_ylabel("USD/CNY")
@@ -45,6 +45,7 @@ ax2 = plt.subplot(312, sharex=ax1)
 ax2.plot(date_list, eur_b_list, c='red')
 ax2.plot(date_list, eur_s_list, c='green')
 ax2.set_ylabel("EUR/CNY")
+
 
 ax3 = plt.subplot(313, sharex=ax1)
 ax3.plot(date_list, hkd_b_list, c='red')
