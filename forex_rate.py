@@ -108,7 +108,7 @@ def rate_output():
     ax2 = plt.subplot(312, sharex=ax1)  # 绘图（3行，1列，第2幅）,共享第一幅x轴
     # https://matplotlib.org/stable/tutorials/colors/colors.html
     ax2.plot(date_list, eur_b_list, color='green')
-    ax2.plot(date_list, eur_s_list, color='yellow')
+    ax2.plot(date_list, eur_s_list, color='pink')
     ax2.set_ylabel("EUR/CNY", fontsize=16)
     ax2.grid(True)
     ax2.legend(('buy_rate', 'sell_rate'), fontsize=8, loc='lower left')
