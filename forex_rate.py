@@ -101,7 +101,7 @@ def rate_output():
     # ax1.fill_between(date_list, usd_b_list, usd_s_list, facecolor='blue', alpha=0.1)  # 填充颜色
     ax1.set_ylabel("USD/CNY", fontsize=16)
     ax1.grid(True)  # 绘制网格
-    ax1.legend(('buy_rate', 'sell_rate'))
+    ax1.legend(('buy_rate', 'sell_rate'))  # 添加图例
 
     ax2 = plt.subplot(312, sharex=ax1)  # 绘图（3行，1列，第2幅）,共享第一幅x轴
     ax2.plot(date_list, eur_b_list, c='red')
