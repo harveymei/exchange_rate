@@ -44,6 +44,7 @@ def rate_input():
             sell_rate_4 = float(input("请输入HKD卖出价："))
             input_value_4 = {"buy_rate": buy_rate_4, "sell_rate": sell_rate_4}
 
+            # 拼接字典键值赋值变量
             rate_record = {
                 input_key_1: input_value_1,
                 input_key_2: input_value_2,
@@ -51,13 +52,14 @@ def rate_input():
                 input_key_4: input_value_4
             }
 
+            # 将字典作为列表元素追加写入列表
             full_data.append(rate_record)
 
-        with open(filename, 'wt') as f_object:
+            # 于每次录入三组汇率后将更新后的列表写入文件
             json.dump(full_data, f_object, indent=4)  # 缩进格式
 
 
-def data_outpu():
+def rate_output():
     filename = 'data.json'
     date_list = []
     usd_b_list, usd_s_list, eur_b_list, eur_s_list, hkd_b_list, hkd_s_list = [], [], [], [], [], []
@@ -116,13 +118,22 @@ def rate_menu():
           "3) 退出程序\n"
           )
 
-    option = input("输入选项值并按回车键确认：")
+    option = input("请输入选项值并按回车键确认：")
     if option == '1':
-        data_input.rate_input()
+        print("开始录入数据")
+        rate_input()
     elif option == '2':
-        data_output.rate_output()
+        print("开始分析数据")
+        rate_output()
     elif option == '3':
+        print("程序退出")
         exit()
     else:
         print("无效输入")
         rate_menu()
+
+
+"""
+执行程序
+"""
+rate_menu()
