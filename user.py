@@ -26,7 +26,7 @@ with open(filename) as f_object:
         input_key_2 = "usd_cny"
         buy_rate_2 = float(input("请输入USD买入价："))
         sell_rate_2 = float(input("请输入USD卖出价："))
-        input_value_2 = {"buy_rate": round(buy_rate_2, 4), "sell_rate": round(sell_rate_2, 4)}  # 处理浮点数保留小数位数
+        input_value_2 = {"buy_rate": round(buy_rate_2, 4), "sell_rate": round(sell_rate_2, 4)}
 
         input_key_3 = "eur_cny"
         buy_rate_3 = float(input("请输入EUR买入价："))
