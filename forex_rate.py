@@ -103,7 +103,7 @@ def rate_output():
     ax1.grid(True)  # 绘制网格
     # https://matplotlib.org/stable/api/legend_api.html
     # 图例位置参数loc默认为最佳位置（自动）
-    ax1.legend(('buy_rate', 'sell_rate'), fontsize=8, loc='lower left')  # 添加图例，指定字体大小及位置
+    ax1.legend(('buy_rate', 'sell_rate'), fontsize=8, loc='lower left')  # 添加图例，指定字体大小及位置（左下方）
 
     ax2 = plt.subplot(312, sharex=ax1)  # 绘图（3行，1列，第2幅）,共享第一幅x轴
     # https://matplotlib.org/stable/tutorials/colors/colors.html
