@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 # @Time    : 2021/5/25 12:12 下午
 # @Author  : Harvey Mei <harvey.mei@msn.com>
-# @FileName: user.py
+# @FileName: forex_rate.py
 # @IDE     : PyCharm
 # @GitHub  : https://github.com/harveymei/
 
