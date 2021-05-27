@@ -91,8 +91,8 @@ def rate_output():
     # https://matplotlib.org/stable/gallery/subplots_axes_and_figures/share_axis_lims_views.html
     # https://matplotlib.org/stable/gallery/subplots_axes_and_figures/shared_axis_demo.html
     # 三位整数（行，列，索引），可逗号分隔或整体传入参数
-    fig = plt.figure(figsize=(10, 6), dpi=128)
-    fig.suptitle("Ping An Bank Forex Rate Per Weekday", fontsize=24)
+    fig = plt.figure(figsize=(10, 6), dpi=128)  # 设置图表尺寸及点数
+    fig.suptitle("Ping An Bank Forex Rate Per Weekday", fontsize=24)  # 设置多图标题
 
     ax1 = plt.subplot(311)  # 绘图（3行，1列，第1幅）
     ax1.plot(date_list, usd_b_list, c='red')
@@ -116,6 +116,7 @@ def rate_output():
     fig.autofmt_xdate()
 
     # plt.show()
+    # 使用精确到秒的当前时间作为随机文件名
     plt.savefig(dt.now().strftime("%Y%m%d%H%M%S") + ".png")
 
     print("数据分析完成，返回主菜单")
