@@ -75,6 +75,7 @@ def rate_output():
     with open(filename) as f_object:
         full_data = json.load(f_object)
 
+        # 遍历当前文件中字典键值放入列表
         for data in full_data:
             date_list.append(dt.strptime(data['date'], "%Y-%m-%d"))  # 日期字符串转日期对象写入列表
             usd_b_list.append(data['usd_cny']['buy_rate'])
@@ -91,7 +92,7 @@ def rate_output():
     # https://matplotlib.org/stable/gallery/subplots_axes_and_figures/share_axis_lims_views.html
     # https://matplotlib.org/stable/gallery/subplots_axes_and_figures/shared_axis_demo.html
     # 三位整数（行，列，索引），可逗号分隔或整体传入参数
-    fig = plt.figure(figsize=(10, 6), dpi=128)  # 设置图表尺寸及点数
+    fig = plt.figure(figsize=(10, 6), dpi=128)  # 设置图表尺寸及解析度（点数每英寸）
     fig.suptitle("Ping An Bank Forex Rate Per Weekday", fontsize=24)  # 设置多图标题
 
     ax1 = plt.subplot(311)  # 绘图（3行，1列，第1幅）
