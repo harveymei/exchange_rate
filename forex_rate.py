@@ -60,11 +60,8 @@ def rate_input():
         # 将字典作为列表元素追加写入列表
         full_data.append(rate_record)
 
-        print(full_data)
-        print(filename)
-
         # 于每次录入三组汇率后将更新后的列表写入文件
-        with open(filename, 'w') as f:
+        with open(filename, 'w') as f:  # 不指定操作模式时，报io.UnsupportedOperation: not writable异常
             json.dump(full_data, f, indent=4)  # 缩进格式
 
 
