@@ -26,41 +26,42 @@ def rate_input():
     with open(filename) as f_object:
         full_data = json.load(f_object)  # 使用Json解码可正常识别[]为空列表，而不是字符串
 
-        while True:
-            input_key_1 = "date"
-            input_value_1 = input("请输入日期：（YYYY-MM-DD）\n"
-                                  "或直接敲回车键退出录入返回主菜单 ")
-            if input_value_1 == '':
-                # break
-                rate_menu()  # 退回主菜单
+    while True:
+        input_key_1 = "date"
+        input_value_1 = input("请输入日期：（YYYY-MM-DD）\n"
+                              "或直接敲回车键退出录入返回主菜单 ")
+        if input_value_1 == '':
+            # break
+            rate_menu()  # 退回主菜单
 
-            input_key_2 = "usd_cny"
-            buy_rate_2 = float(input("请输入USD买入价："))
-            sell_rate_2 = float(input("请输入USD卖出价："))
-            input_value_2 = {"buy_rate": buy_rate_2, "sell_rate": sell_rate_2}
+        input_key_2 = "usd_cny"
+        buy_rate_2 = float(input("请输入USD买入价："))
+        sell_rate_2 = float(input("请输入USD卖出价："))
+        input_value_2 = {"buy_rate": buy_rate_2, "sell_rate": sell_rate_2}
 
-            input_key_3 = "eur_cny"
-            buy_rate_3 = float(input("请输入EUR买入价："))
-            sell_rate_3 = float(input("请输入EUR卖出价："))
-            input_value_3 = {"buy_rate": buy_rate_3, "sell_rate": sell_rate_3}
+        input_key_3 = "eur_cny"
+        buy_rate_3 = float(input("请输入EUR买入价："))
+        sell_rate_3 = float(input("请输入EUR卖出价："))
+        input_value_3 = {"buy_rate": buy_rate_3, "sell_rate": sell_rate_3}
 
-            input_key_4 = "hkd_cny"
-            buy_rate_4 = float(input("请输入HKD买入价："))
-            sell_rate_4 = float(input("请输入HKD卖出价："))
-            input_value_4 = {"buy_rate": buy_rate_4, "sell_rate": sell_rate_4}
+        input_key_4 = "hkd_cny"
+        buy_rate_4 = float(input("请输入HKD买入价："))
+        sell_rate_4 = float(input("请输入HKD卖出价："))
+        input_value_4 = {"buy_rate": buy_rate_4, "sell_rate": sell_rate_4}
 
-            # 拼接字典键值赋值变量
-            rate_record = {
-                input_key_1: input_value_1,
-                input_key_2: input_value_2,
-                input_key_3: input_value_3,
-                input_key_4: input_value_4
-            }
+        # 拼接字典键值赋值变量
+        rate_record = {
+            input_key_1: input_value_1,
+            input_key_2: input_value_2,
+            input_key_3: input_value_3,
+            input_key_4: input_value_4
+        }
 
-            # 将字典作为列表元素追加写入列表
-            full_data.append(rate_record)
+        # 将字典作为列表元素追加写入列表
+        full_data.append(rate_record)
 
-            # 于每次录入三组汇率后将更新后的列表写入文件
+        # 于每次录入三组汇率后将更新后的列表写入文件
+        with open(filename) as f_object:
             json.dump(full_data, f_object, indent=4)  # 缩进格式
 
 
