@@ -93,7 +93,7 @@ def rate_output():
     # https://matplotlib.org/stable/gallery/subplots_axes_and_figures/share_axis_lims_views.html
     # https://matplotlib.org/stable/gallery/subplots_axes_and_figures/shared_axis_demo.html
     # 三位整数（行，列，索引），可逗号分隔或整体传入参数
-    fig = plt.figure(figsize=(10, 6), dpi=128)  # 设置图表尺寸及解析度（点数每英寸）
+    fig = plt.figure(figsize=(10, 6), dpi=128)  # 设置图表尺寸及解析度（点数每英寸）（1英寸=2.54厘米）
     fig.suptitle("Ping An Bank Forex Rate Per Weekday", fontsize=24)  # 设置多图标题
 
     ax1 = plt.subplot(311)  # 绘图（3行，1列，第1幅）
