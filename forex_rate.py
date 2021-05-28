@@ -23,7 +23,7 @@ def rate_input():
     定义汇率录入函数
     """
     filename = 'data.json'
-    with open(filename) as f_object:
+    with open(filename, 'r') as f_object:
         full_data = json.load(f_object)  # 使用Json解码可正常识别[]为空列表，而不是字符串
 
     while True:
@@ -60,9 +60,12 @@ def rate_input():
         # 将字典作为列表元素追加写入列表
         full_data.append(rate_record)
 
+        print(full_data)
+        print(filename)
+
         # 于每次录入三组汇率后将更新后的列表写入文件
-        with open(filename) as f_object:
-            json.dump(full_data, f_object, indent=4)  # 缩进格式
+        with open(filename, 'w') as f:
+            json.dump(full_data, f, indent=4)  # 缩进格式
 
 
 def rate_output():
