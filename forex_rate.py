@@ -123,7 +123,7 @@ def rate_output():
     ax3.set_xlabel("Weekday", fontsize=16)  # 仅在第三幅图显示x轴标签
     ax3.grid(True)
     ax3.legend(('buy_rate', 'sell_rate'), fontsize=8, loc='lower left')
-    fig.autofmt_xdate()  # 仅在第三幅图处绘制斜的x轴日期标签，默认参数值为右对齐旋转30度
+    fig.autofmt_xdate()  # 仅在第3幅图处绘制斜的x轴日期标签，默认参数值为右对齐旋转30度
 
     # plt.show()
     # 使用精确到秒的当前时间作为随机文件名
