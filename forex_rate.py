@@ -29,7 +29,7 @@ def rate_input():
     while True:
         input_key_1 = "date"
         input_value_1 = input("请输入日期（YYYY-MM-DD）\n"
-                              "或直接敲回车键退出录入返回主菜单：")
+                              "或直接按回车键退出录入并返回主菜单：")
         if input_value_1 == '':
             # break
             rate_menu()  # 退回主菜单
