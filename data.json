@@ -358,5 +358,35 @@
             "buy_rate": 82.166,
             "sell_rate": 81.837
         }
+    },
+    {
+        "date": "2021-06-02",
+        "usd_cny": {
+            "buy_rate": 639.09,
+            "sell_rate": 636.53
+        },
+        "eur_cny": {
+            "buy_rate": 782.62,
+            "sell_rate": 776.38
+        },
+        "hkd_cny": {
+            "buy_rate": 82.37,
+            "sell_rate": 82.04
+        }
+    },
+    {
+        "date": "2021-06-03",
+        "usd_cny": {
+            "buy_rate": 639.62,
+            "sell_rate": 637.05
+        },
+        "eur_cny": {
+            "buy_rate": 782.27,
+            "sell_rate": 776.03
+        },
+        "hkd_cny": {
+            "buy_rate": 82.441,
+            "sell_rate": 82.111
+        }
     }
 ]
