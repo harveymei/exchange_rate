@@ -492,6 +492,10 @@
         "hkd_cny": {
             "buy_rate": 82.574,
             "sell_rate": 82.243
+        },
+        "gbp_cny": {
+            "buy_rate": 906.08,
+            "sell_rate": 898.86
         }
     },
     {
@@ -507,6 +511,10 @@
         "hkd_cny": {
             "buy_rate": 82.698,
             "sell_rate": 82.367
+        },
+        "gbp_cny": {
+            "buy_rate": 907.03,
+            "sell_rate": 899.8
         }
     }
 ]

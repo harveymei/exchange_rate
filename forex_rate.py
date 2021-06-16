@@ -112,8 +112,8 @@ def rate_output():
     # https://matplotlib.org/stable/gallery/subplots_axes_and_figures/share_axis_lims_views.html
     # https://matplotlib.org/stable/gallery/subplots_axes_and_figures/shared_axis_demo.html
     # 三位整数（行，列，索引），可逗号分隔或整体传入参数
-    fig = plt.figure(figsize=(10, 10), dpi=128)  # 设置图表尺寸及解析度（点数每英寸，1英寸=2.54厘米）
-    # 新增英镑汇率后，图表尺寸由10:6调整为10:10比例
+    fig = plt.figure(figsize=(10, 8), dpi=128)  # 设置图表尺寸及解析度（点数每英寸，1英寸=2.54厘米）
+    # 新增英镑汇率后，图表尺寸由10:6调整为10:8比例
     fig.suptitle("Ping An Bank Forex Rate Per Weekday", fontsize=24)  # 设置多图标题
 
     ax1 = plt.subplot(411)  # 绘图（4行，1列，第1幅）
@@ -145,10 +145,10 @@ def rate_output():
     ax3.legend(('buy_rate', 'sell_rate'), fontsize=8, loc='lower left')
     # fig.autofmt_xdate()  # 仅在第3幅图处绘制斜的x轴日期标签，默认参数值为右对齐旋转30度
 
-    # 新增英镑汇率
+    # 新增英镑汇率 2021-06-16
     ax4 = plt.subplot(414, sharex=ax1)
-    ax4.plot(date_list, gbp_b_list, c='m')
-    ax4.plot(date_list, gbp_s_list, c='k')
+    ax4.plot(date_list, gbp_b_list, c='brown')  # 棕色
+    ax4.plot(date_list, gbp_s_list, c='cyan')  # 青色
 
     ax4.set_ylabel("GBP/CNY", fontsize=16)
     ax4.set_xlabel("Weekday", fontsize=16)  # 调整为仅在第四幅图显示x轴坐标
