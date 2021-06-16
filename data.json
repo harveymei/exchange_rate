@@ -448,5 +448,65 @@
             "buy_rate": 82.601,
             "sell_rate": 82.27
         }
+    },
+    {
+        "date": "2021-06-10",
+        "usd_cny": {
+            "buy_rate": 639.54,
+            "sell_rate": 636.98
+        },
+        "eur_cny": {
+            "buy_rate": 779.88,
+            "sell_rate": 773.65
+        },
+        "hkd_cny": {
+            "buy_rate": 82.413,
+            "sell_rate": 82.084
+        }
+    },
+    {
+        "date": "2021-06-11",
+        "usd_cny": {
+            "buy_rate": 639.74,
+            "sell_rate": 637.18
+        },
+        "eur_cny": {
+            "buy_rate": 781.24,
+            "sell_rate": 775.01
+        },
+        "hkd_cny": {
+            "buy_rate": 82.447,
+            "sell_rate": 82.117
+        }
+    },
+    {
+        "date": "2021-06-14",
+        "usd_cny": {
+            "buy_rate": 640.86,
+            "sell_rate": 638.29
+        },
+        "eur_cny": {
+            "buy_rate": 777.05,
+            "sell_rate": 770.85
+        },
+        "hkd_cny": {
+            "buy_rate": 82.574,
+            "sell_rate": 82.243
+        }
+    },
+    {
+        "date": "2021-06-15",
+        "usd_cny": {
+            "buy_rate": 641.89,
+            "sell_rate": 639.32
+        },
+        "eur_cny": {
+            "buy_rate": 779.45,
+            "sell_rate": 773.23
+        },
+        "hkd_cny": {
+            "buy_rate": 82.698,
+            "sell_rate": 82.367
+        }
     }
 ]
