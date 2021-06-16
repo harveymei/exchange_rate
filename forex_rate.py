@@ -107,6 +107,8 @@ def rate_output():
 
         # print(date_list, usd_b_list)
 
+    zero_count = gbp_b_list.count(0)  # 固定值，计算英镑买入价列表中0值的数量（历史数据中不含英镑价格的数量）
+
     # 两个或多个共享一个轴的图（解决不同y值差距较大，单图因比例问题影响细节显示）
     # Subplots Layout 多图布局
     # https://matplotlib.org/stable/gallery/subplots_axes_and_figures/share_axis_lims_views.html
@@ -147,8 +149,10 @@ def rate_output():
 
     # 新增英镑汇率 2021-06-16
     ax4 = plt.subplot(414, sharex=ax1)
-    ax4.plot(date_list, gbp_b_list, c='brown')  # 棕色
-    ax4.plot(date_list, gbp_s_list, c='cyan')  # 青色
+    # 取原始列表中非0值元素作为x坐标值列表和y坐标值列表，传入参数
+    # 不绘制历史时间段中y值为0值（实际缺失）的部分，避免影响显示比例
+    ax4.plot(date_list[zero_count:], gbp_b_list[zero_count:], c='brown')  # 棕色
+    ax4.plot(date_list[zero_count:], gbp_s_list[zero_count:], c='cyan')  # 青色
 
     ax4.set_ylabel("GBP/CNY", fontsize=16)
     ax4.set_xlabel("Weekday", fontsize=16)  # 调整为仅在第四幅图显示x轴坐标
