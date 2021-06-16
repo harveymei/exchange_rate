@@ -98,7 +98,7 @@ def rate_output():
             # 添加异常处理，处理数据文件早期无英镑汇率的数据读取问题
             try:
                 gbp_b_list.append(data['gbp_cny']['buy_rate'])
-            except KeyError:  # 读取数据产生KeyError异常（不存在）时忽略异常并在列表追加写入0值（坐标y值）
+            except KeyError:  # 读取数据产生KeyError异常（不存在）时捕获异常并在列表追加写入0值（坐标y值）
                 gbp_b_list.append(0)
             try:
                 gbp_s_list.append(data['gbp_cny']['sell_rate'])
@@ -107,7 +107,7 @@ def rate_output():
 
         # print(date_list, usd_b_list)
 
-    zero_count = gbp_b_list.count(0)  # 固定值，计算英镑买入价列表中0值的数量（历史数据中不含英镑价格的数量）
+    zero_count = gbp_b_list.count(0)  # 固定值，计算英镑买入价列表中0值的数量（早期历史数据中不含英镑价格的数量）
 
     # 两个或多个共享一个轴的图（解决不同y值差距较大，单图因比例问题影响细节显示）
     # Subplots Layout 多图布局
