@@ -95,7 +95,7 @@ def rate_output():
             eur_s_list.append(data['eur_cny']['sell_rate'])
             hkd_b_list.append(data['hkd_cny']['buy_rate'])
             hkd_s_list.append(data['hkd_cny']['sell_rate'])
-            # 添加异常处理，处理数据文件早期无英镑汇率数据的问题
+            # 添加异常处理，处理数据文件早期无英镑汇率的数据读取问题
             try:
                 gbp_b_list.append(data['gbp_cny']['buy_rate'])
             except KeyError:  # 读取数据产生KeyError异常（不存在）时忽略异常并在列表追加写入0值
