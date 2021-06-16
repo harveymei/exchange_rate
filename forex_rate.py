@@ -17,6 +17,7 @@ round()函数截取小数点后n位且不会四舍五入
 import json
 from datetime import datetime as dt  # 减少输入
 from matplotlib import pyplot as plt
+from matplotlib import font_manager as mfm  # 加入中文字体支持
 
 
 def rate_input():
@@ -83,6 +84,9 @@ def rate_output():
     hkd_b_list, hkd_s_list = [], []
     gbp_b_list, gbp_s_list = [], []
 
+    font_path = 'SourceHanSerifSC-Light.otf'
+    prop = mfm.FontProperties(fname=font_path)
+
     with open(filename) as f_object:
         full_data = json.load(f_object)
 
@@ -116,7 +120,7 @@ def rate_output():
     # 三位整数（行，列，索引），可逗号分隔或整体传入参数
     fig = plt.figure(figsize=(10, 8), dpi=128)  # 设置图表尺寸及解析度（点数每英寸，1英寸=2.54厘米）
     # 新增英镑汇率后，图表尺寸由10:6调整为10:8比例
-    fig.suptitle("Ping An Bank Forex Rate Per Weekday", fontsize=24)  # 设置多图标题
+    fig.suptitle("平安银行每工作日汇率分析", fontsize=24, fontproperties=prop)  # 设置多图标题
 
     ax1 = plt.subplot(411)  # 绘图（4行，1列，第1幅）
     ax1.plot(date_list, usd_b_list, c='red')
