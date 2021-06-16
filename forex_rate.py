@@ -84,7 +84,7 @@ def rate_output():
     hkd_b_list, hkd_s_list = [], []
     gbp_b_list, gbp_s_list = [], []
 
-    # 定义中文字体
+    # 指定中文字体
     font_path = 'SourceHanSerifSC-Light.otf'  # 思远宋体Light（简体中文）
     prop = mfm.FontProperties(fname=font_path)
 
