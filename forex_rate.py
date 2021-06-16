@@ -98,7 +98,7 @@ def rate_output():
             # 添加异常处理，处理数据文件早期无英镑汇率的数据读取问题
             try:
                 gbp_b_list.append(data['gbp_cny']['buy_rate'])
-            except KeyError:  # 读取数据产生KeyError异常（不存在）时忽略异常并在列表追加写入0值
+            except KeyError:  # 读取数据产生KeyError异常（不存在）时忽略异常并在列表追加写入0值（坐标y值）
                 gbp_b_list.append(0)
             try:
                 gbp_s_list.append(data['gbp_cny']['sell_rate'])
