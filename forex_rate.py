@@ -93,10 +93,6 @@ def rate_output():
     hkd_b_list, hkd_s_list = [], []
     gbp_b_list, gbp_s_list = [], []
 
-    # 指定中文字体
-    font_path = 'SourceHanSerifSC-Light.otf'  # 思远宋体Light（简体中文）
-    prop = mfm.FontProperties(fname=font_path)
-
     with open(filename) as f_object:
         full_data = json.load(f_object)
 
@@ -122,6 +118,10 @@ def rate_output():
         # print(date_list, usd_b_list)
 
     zero_count = gbp_b_list.count(0)  # 固定值，计算英镑买入价列表中0值的数量（早期历史数据中不含英镑价格的数量）
+
+    # 指定中文字体
+    font_path = 'SourceHanSerifSC-Light.otf'  # 思远宋体Light（简体中文）
+    prop = mfm.FontProperties(fname=font_path)
 
     # 两个或多个共享一个轴的图（解决不同y值差距较大，单图因比例问题影响细节显示）
     # Subplots Layout 多图布局
