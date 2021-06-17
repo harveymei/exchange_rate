@@ -173,7 +173,6 @@ def rate_output():
     ax4.legend(("buy_rate", 'sell_rate'), fontsize=8, loc='lower left')
     fig.autofmt_xdate()  # 调整为仅在第4幅图处绘制斜的x轴日期标签，默认参数值为右对齐旋转30度
 
-
     # plt.show()
     # 使用精确到秒的当前时间作为随机文件名
     plt.savefig(dt.now().strftime("%Y%m%d%H%M%S") + ".png")
