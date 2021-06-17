@@ -146,8 +146,8 @@ def rate_output():
     # 颜色设置
     # https://matplotlib.org/stable/tutorials/colors/colors.html
     # https://matplotlib.org/stable/gallery/color/named_colors.html （颜色名称列表）
-    ax2.plot(date_list, eur_b_list, color='green')
-    ax2.plot(date_list, eur_s_list, color='pink')
+    ax2.plot(date_list, eur_b_list, color='green')  # 绿色
+    ax2.plot(date_list, eur_s_list, color='pink')  # 粉红色
     ax2.set_ylabel("EUR/CNY", fontsize=16)
     ax2.grid(True)
     ax2.legend(('buy_rate', 'sell_rate'), fontsize=8, loc='lower left')
